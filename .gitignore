@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# user info
+tweety.config.js
+
 # production
 /build
 
