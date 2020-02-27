@@ -14,7 +14,17 @@ class Navbar extends Component {
             <img src={ Logo } alt="Tweety Home"/>
             <span>Tweety</span>
           </Link>
-          </div>        
+          </div>  
+          {this.props.currentUser.isAuthenticated ? (
+            <ul className="nav navbar-nav navbar-right">
+              <li>
+                <Link to={`/users/${this.props.currentUser.user.id/messages/new}`}>New Messages</Link>
+              </li>
+              <li>
+                <a onClick={this.logOut}>Log Out</a>
+              </li>
+            </ul>
+          )}      
           <ul className="nav navbar-nav navbar-right">
             <li>
               <Link to='/signup'>Sign up</Link>
