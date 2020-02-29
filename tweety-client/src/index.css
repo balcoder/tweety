@@ -44,7 +44,7 @@ ul.nav.navbar-nav li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: -1;
   background-color: midnightblue;
   background-image: url('./images/tweety-binoc.jpg');
@@ -52,7 +52,17 @@ ul.nav.navbar-nav li {
   background-size: cover;
   text-align: center;
   padding: 1rem;
+  padding-top: 80px;
   color: white;
-  text-shadow: 0 0 8px #030b11;
-  
+  text-shadow: 0 0 8px #030b11;  
+}
+
+#messages .list-group-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 7px 20px 12px;
+}
+
+#messages:not(.no-hover) .list-group-item:hover {
+  background-color: #e6ecf1;
 }
