@@ -12,7 +12,10 @@ class MessageForm extends Component {
 
   handleNewMessage = event => {
     event.preventDefault();
-
+    this.props.postNewMessage(this.state.message);
+    this.setState({message: ''});
+    // go back to the root route with the MessageTimeLine
+    this.props.history.push('/');
   }
   render() {
     return (

@@ -9,7 +9,7 @@ router.route('/').post(createMessage);
 
 // prefix - /api/users/:id/messages/:message_id
 router
-  .route('/:meassage_id')
+  .route('/:message_id')
   .get(getMessage)
   .delete(deleteMessage);
 
